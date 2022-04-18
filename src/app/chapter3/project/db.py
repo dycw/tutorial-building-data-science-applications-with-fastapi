@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from dataclasses import field
 
-from app.chapter3.project.models.post import Post
-from app.chapter3.project.models.user import User
+from chapter3.project.models.post import Post
+from chapter3.project.models.user import User
 
 
 @dataclass
