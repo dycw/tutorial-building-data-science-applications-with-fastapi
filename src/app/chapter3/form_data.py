@@ -8,5 +8,7 @@ app = FastAPI()
 
 
 @app.post("/users")
-async def create_user(name: str = Form(...), age: int = Form(...)) -> dict[str, Any]:
+async def create_user(
+    name: str = Form(...), age: int = Form(...)
+) -> dict[str, Any]:
     return {"name": name, "age": age}

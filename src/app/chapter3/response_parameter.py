@@ -29,7 +29,9 @@ posts = {1: Post(title="Hello")}
 
 
 @app.put("/posts/{id}")
-async def update_or_create_post(id: int, post: Post, response: Response) -> Post:
+async def update_or_create_post(
+    id: int, post: Post, response: Response
+) -> Post:
     if id not in posts:
         response.status_code = status.HTTP_201_CREATED
     posts[id] = post
