@@ -3,6 +3,8 @@ ci:
 
 default_stages: [commit]
 
+exclude: (^official-repo|alembic/)
+
 repos:
   # fixers
   - repo: https://github.com/asottile/pyupgrade
@@ -14,7 +16,7 @@ repos:
     rev: v3.0.1
     hooks:
       - id: reorder-python-imports
-        args: [--py37-plus]
+        args: [--py39-plus, --application-directories=.:src]
   - repo: https://github.com/asottile/yesqa
     rev: v1.3.0
     hooks:

@@ -128,3 +128,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# databases
+*.db
+*.db-shm
+*.db-wal
