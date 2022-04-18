@@ -1,5 +1,5 @@
-from app.chapter3.project.routers import posts
-from app.chapter3.project.routers import users
+from chapter3.project.routers import posts
+from chapter3.project.routers import users
 from fastapi import FastAPI
 
 
