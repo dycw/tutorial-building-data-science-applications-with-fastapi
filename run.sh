@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-uvicorn \
-	--reload chapter3.project.app:app
+uvicorn --reload app.chapter5.foo:app
