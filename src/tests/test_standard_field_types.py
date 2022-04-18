@@ -1,8 +1,9 @@
+from pydantic import ValidationError
+from pytest import raises
+
 from app.chapter4.standard_field_types import Gender
 from app.chapter4.standard_field_types import Person2
 from app.chapter4.standard_field_types import Person3
-from pydantic import ValidationError
-from pytest import raises
 
 
 def test_invalid_gender() -> None:

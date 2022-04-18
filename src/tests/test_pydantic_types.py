@@ -1,6 +1,7 @@
-from app.chapter4.pydantic_types import User
 from pydantic import ValidationError
 from pytest import raises
+
+from app.chapter4.pydantic_types import User
 
 
 def test_invalid_email() -> None:

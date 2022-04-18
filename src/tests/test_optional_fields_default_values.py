@@ -1,8 +1,9 @@
 from time import sleep
 
+from pytest import raises
+
 from app.chapter4.optional_fields_default_values import Model
 from app.chapter4.optional_fields_default_values import UserProfile
-from pytest import raises
 
 
 def test_user_profile() -> None:
