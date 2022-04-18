@@ -19,7 +19,9 @@ async def upload_file_2(file: UploadFile = File(...)) -> dict[str, Any]:
 
 
 @app.post("/files-3")
-async def upload_file_3(files: list[UploadFile] = File(...)) -> list[dict[str, Any]]:
+async def upload_file_3(
+    files: list[UploadFile] = File(...),
+) -> list[dict[str, Any]]:
     return [
         {"file_name": file.filename, "content_type": file.content_type}
         for file in files
