@@ -1,0 +1,13 @@
+{
+  "include": ["src"],
+  "venvPath": ".direnv",
+  "pythonVersion": "3.10",
+  "pythonPlatform": "Linux",
+  "executionEnvironments": [{ "root": "src" }],
+  "typeCheckingMode": "strict",
+  "reportMissingTypeStubs": false,
+  "reportUnknownArgumentType": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownVariableType": false,
+  "reportUntypedBaseClass": false
+}
