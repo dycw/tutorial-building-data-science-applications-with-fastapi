@@ -59,7 +59,7 @@ async def update_post(
     post_update: PostPartialUpdate,
     post: PostTortoise = Depends(get_post_or_404),
 ) -> PostDB:
-    post.update_from_dict(post_update.dict(exclude_unset=True))
+    _ = post.update_from_dict(post_update.dict(exclude_unset=True))
     await post.save()
     return PostDB.from_orm(post)
 
@@ -72,7 +72,7 @@ async def delete_post(post: PostTortoise = Depends(get_post_or_404)) -> None:
 @app.post("/comments", response_model=CommentDB)
 async def create_comment(comment: CommentBase) -> CommentDB:
     try:
-        await PostTortoise.get(id=comment.post_id)
+        _ = await PostTortoise.get(id=comment.post_id)
     except DoesNotExist:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,

@@ -1,5 +1,5 @@
-from enum import auto
 from enum import Enum
+from enum import auto
 from typing import Any
 
 from fastapi import FastAPI

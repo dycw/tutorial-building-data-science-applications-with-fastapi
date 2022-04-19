@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-uvicorn --reload app.chapter6.sqlalchemy.app:app
+uvicorn --reload app.chapter7.csrf.app:app

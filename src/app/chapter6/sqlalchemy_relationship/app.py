@@ -13,13 +13,14 @@ from app.chapter6.sqlalchemy_relationship.database import get_database
 from app.chapter6.sqlalchemy_relationship.database import sqlalchemy_engine
 from app.chapter6.sqlalchemy_relationship.models import CommentCreate
 from app.chapter6.sqlalchemy_relationship.models import CommentDB
-from app.chapter6.sqlalchemy_relationship.models import comments
-from app.chapter6.sqlalchemy_relationship.models import metadata
 from app.chapter6.sqlalchemy_relationship.models import PostCreate
 from app.chapter6.sqlalchemy_relationship.models import PostDB
 from app.chapter6.sqlalchemy_relationship.models import PostPartialUpdate
 from app.chapter6.sqlalchemy_relationship.models import PostPublic
+from app.chapter6.sqlalchemy_relationship.models import comments
+from app.chapter6.sqlalchemy_relationship.models import metadata
 from app.chapter6.sqlalchemy_relationship.models import posts
+
 
 app = FastAPI()
 

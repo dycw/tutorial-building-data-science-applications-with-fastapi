@@ -7,10 +7,10 @@ from fastapi import status
 
 from app.chapter6.sqlalchemy.database import get_database
 from app.chapter6.sqlalchemy.database import sqlalchemy_engine
-from app.chapter6.sqlalchemy.models import metadata
 from app.chapter6.sqlalchemy.models import PostCreate
 from app.chapter6.sqlalchemy.models import PostDB
 from app.chapter6.sqlalchemy.models import PostPartialUpdate
+from app.chapter6.sqlalchemy.models import metadata
 from app.chapter6.sqlalchemy.models import posts
 
 
