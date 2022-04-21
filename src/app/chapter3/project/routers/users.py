@@ -33,6 +33,6 @@ async def create(user_create: UserCreate) -> User:
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete(id: int) -> None:
     try:
-        db.users.pop(id)
+        _ = db.users.pop(id)
     except KeyError:
         raise HTTPException(status.HTTP_404_NOT_FOUND)

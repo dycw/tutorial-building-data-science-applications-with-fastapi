@@ -49,7 +49,7 @@ async def update_post(
     post_update: PostPartialUpdate,
     post: PostTortoise = Depends(get_post_or_404),
 ) -> PostDB:
-    post.update_from_dict(post_update.dict(exclude_unset=True))
+    _ = post.update_from_dict(post_update.dict(exclude_unset=True))
     await post.save()
     return PostDB.from_orm(post)
 

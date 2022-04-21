@@ -16,5 +16,5 @@
   "reportMissingSuperCall": "error",
   "reportPropertyTypeMismatch": "error",
   "reportUnnecessaryTypeIgnoreComment": "error",
-  "reportUnusedCallReport": "error"
+  "reportUnusedCallResult": "error"
 }

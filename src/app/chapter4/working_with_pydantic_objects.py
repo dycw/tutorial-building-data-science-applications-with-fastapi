@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from dataclasses import field
 from datetime import date
-from enum import auto
 from enum import Enum
+from enum import auto
 from typing import Any
 from typing import cast
 

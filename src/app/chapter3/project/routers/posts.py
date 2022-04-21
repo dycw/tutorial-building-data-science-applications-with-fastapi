@@ -41,6 +41,6 @@ async def create(post_create: PostCreate) -> Post:
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete(id: int) -> None:
     try:
-        db.posts.pop(id)
+        _ = db.posts.pop(id)
     except KeyError:
         raise HTTPException(status.HTTP_404_NOT_FOUND)

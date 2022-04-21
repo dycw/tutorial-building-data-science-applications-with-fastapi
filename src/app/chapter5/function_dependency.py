@@ -87,4 +87,4 @@ async def update(
 
 @app.delete("/posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete(post: Post = Depends(get_post_or_404)) -> None:
-    db.posts.pop(post.id)
+    _ = db.posts.pop(post.id)
