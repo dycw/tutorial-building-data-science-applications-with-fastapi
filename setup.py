@@ -21,7 +21,7 @@ setup(  # https://bit.ly/3MJfVyH
     long_description_content_type="text/markdown",
     author="Derek Wan",
     author_email="d.wan@icloud.com",
-    url="https://github.com/dycw/template",
+    url="https://github.com/dycw/tutorial-building-data-science-applications-with-fastapi",  # noqa: E501
     packages=find_packages("src"),
     options={"bdist_wheel": {"universal": "1"}},
     license="MIT",
