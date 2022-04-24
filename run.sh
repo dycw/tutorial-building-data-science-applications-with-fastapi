@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-uvicorn --reload app.chapter09.app:app
+cd src/app/chapter10 || exit
+# uvicorn --reload app.app:app
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker --reload app.app:app
