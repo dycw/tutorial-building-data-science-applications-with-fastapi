@@ -38,6 +38,7 @@ setup(  # https://bit.ly/3MJfVyH
         "databases[sqlite] >= 0.5.5, < 0.6",
         "email-validator >= 1.1.3, < 1.2",
         "fastapi >= 0.75.2, < 0.76",
+        "gunicorn >= 20.1.0, < 20.2",
         "httpx >= 0.22.0, < 0.23",
         "joblib >= 1.1.0, < 1.2",
         "loguru >= 0.6.0, < 0.7",
