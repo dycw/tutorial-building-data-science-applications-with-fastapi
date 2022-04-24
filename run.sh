@@ -6,4 +6,4 @@ gunicorn \
 	-w 4 \
 	-k uvicorn.workers.UvicornWorker \
 	--reload \
-	src.app.chapter13.prediction_endpoint:app
+	src.app.chapter13.caching:app
