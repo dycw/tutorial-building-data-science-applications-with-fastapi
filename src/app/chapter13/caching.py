@@ -49,14 +49,14 @@ newgroups_model = NewsgroupsModel()
 
 
 @app.post("/prediction")
-async def prediction(
+def prediction(
     output: PredictionOutput = Depends(newgroups_model.predict),
 ) -> PredictionOutput:
     return output
 
 
 @app.delete("/cache", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_cache() -> None:
+def delete_cache() -> None:
     memory.clear()
 
 
