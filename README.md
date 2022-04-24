@@ -1,3 +1,4 @@
-# Building Data Science Applications with FastAPI
+# building-data-science-applications-with-fastapi
 
-Official [repo](https://github.com/PacktPublishing/Building-Data-Science-Applications-with-FastAPI).
+Learning the [Building Data Science Applications with FastAPI](https://www.packtpub.com/product/building-data-science-applications-with-fastapi/9781801079211)
+book.
