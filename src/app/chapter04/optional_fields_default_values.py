@@ -1,11 +1,12 @@
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel
 
 
 class UserProfile(BaseModel):
     nickname: str
-    location: str | None = None
+    location: Optional[str] = None
     subscribed_newsletter: bool = True
 
 

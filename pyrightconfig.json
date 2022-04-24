@@ -2,7 +2,7 @@
   "include": ["src"],
   "exclude": ["**/alembic"],
   "venvPath": ".direnv",
-  "pythonVersion": "3.10",
+  "pythonVersion": "3.9",
   "pythonPlatform": "Linux",
   "executionEnvironments": [{ "root": "src" }],
   "typeCheckingMode": "strict",

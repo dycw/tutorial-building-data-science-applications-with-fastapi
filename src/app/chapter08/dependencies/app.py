@@ -1,3 +1,5 @@
+from typing import Optional
+
 from fastapi import Cookie
 from fastapi import FastAPI
 from fastapi import WebSocket
@@ -14,7 +16,7 @@ app = FastAPI()
 async def websocket_endpoint(
     websocket: WebSocket,
     username: str = "Anonymous",
-    token: str | None = Cookie(None),
+    token: Optional[str] = Cookie(None),
 ) -> None:
     if token != API_TOKEN:
         await websocket.close(code=status.WS_1008_POLICY_VIOLATION)

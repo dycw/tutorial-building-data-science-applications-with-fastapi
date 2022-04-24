@@ -1,4 +1,5 @@
 from typing import Any
+from typing import Optional
 
 from fastapi import Depends
 from fastapi import FastAPI
@@ -7,7 +8,7 @@ from fastapi import Header
 from fastapi import status
 
 
-def secret_header(secret_header: str | None = Header(None)) -> None:
+def secret_header(secret_header: Optional[str] = Header(None)) -> None:
     if not secret_header or secret_header != "SECRET_VALUE":  # noqa: S105
         raise HTTPException(status.HTTP_403_FORBIDDEN)
 

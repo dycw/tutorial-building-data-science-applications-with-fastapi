@@ -11,7 +11,7 @@ repos:
     rev: v2.32.0
     hooks:
       - id: pyupgrade
-        args: [--py310-plus]
+        args: [--py39-plus]
   - repo: https://github.com/asottile/yesqa
     rev: v1.3.0
     hooks:
@@ -105,30 +105,25 @@ repos:
     rev: 6.6.0
     hooks:
       - id: pip-compile
-        name: pip-compile requirements.in
+        name: pip-compile
         args:
           [
             --allow-unsafe,
             --generate-hashes,
-            --no-annotate,
-            --no-header,
-            --output-file=requirements/requirements.txt,
+            --output-file=requirements.txt,
             --quiet,
             --upgrade,
-            requirements/requirements.in,
           ]
-        files: ^requirements/requirements\.(in|txt)$
+        files: ^setup.py$
       - id: pip-compile
-        name: pip-compile requirements-dev.in
+        name: pip-compile (dev)
         args:
           [
             --allow-unsafe,
+            --extra=dev,
             --generate-hashes,
-            --no-annotate,
-            --no-header,
-            --output-file=requirements/dev.txt,
+            --output-file=requirements-dev.txt,
             --quiet,
             --upgrade,
-            requirements/dev.in,
           ]
-        files: ^requirements/dev\.(in|txt)$
+        files: ^setup.py$

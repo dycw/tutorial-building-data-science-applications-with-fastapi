@@ -1,4 +1,5 @@
 from typing import Any
+from typing import Optional
 
 from fastapi import Cookie
 from fastapi import FastAPI
@@ -19,5 +20,5 @@ async def get_header_2(user_agent: str = Header(...)) -> dict[str, Any]:
 
 
 @app.get("/3")
-async def get_header_3(hello: str | None = Cookie(None)) -> dict[str, Any]:
+async def get_header_3(hello: Optional[str] = Cookie(None)) -> dict[str, Any]:
     return {"hello": hello}

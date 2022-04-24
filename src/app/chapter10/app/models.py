@@ -3,10 +3,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 from pydantic import Field
-from tortoise.fields import CharField
-from tortoise.fields import DatetimeField
-from tortoise.fields import IntField
-from tortoise.fields import TextField
+from tortoise import fields
 from tortoise.models import Model
 
 
@@ -33,10 +30,10 @@ class PostDB(PostBase):
 
 
 class PostTortoise(Model):
-    id = IntField(pk=True, generated=True)
-    publication_date = DatetimeField(null=False)
-    title = CharField(max_length=255, null=False)
-    content = TextField(null=False)
+    id = fields.IntField(pk=True, generated=True)
+    publication_date = fields.DatetimeField(null=False)
+    title = fields.CharField(max_length=255, null=False)
+    content = fields.TextField(null=False)
 
     class Meta:  # type: ignore
         table = "posts"

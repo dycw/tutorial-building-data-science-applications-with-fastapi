@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from dataclasses import field
 from typing import Any
+from typing import Optional
 
 from fastapi import Depends
 from fastapi import FastAPI
@@ -47,8 +48,8 @@ class Post(BaseModel):
 
 
 class PostUpdate(BaseModel):
-    title: str | None
-    content: str | None
+    title: Optional[str]
+    content: Optional[str]
 
 
 @dataclass
