@@ -1,3 +1,5 @@
+from typing import Optional
+
 from tortoise.exceptions import DoesNotExist
 
 from app.chapter07.authentication.models import AccessToken
@@ -7,7 +9,7 @@ from app.chapter07.authentication.models import UserTortoise
 from app.chapter07.authentication.password import verify_password
 
 
-async def authenticate(email: str, password: str) -> UserDB | None:
+async def authenticate(email: str, password: str) -> Optional[UserDB]:
     try:
         user = await UserTortoise.get(email=email)
     except DoesNotExist:

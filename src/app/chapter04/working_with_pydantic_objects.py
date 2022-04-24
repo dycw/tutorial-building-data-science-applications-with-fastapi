@@ -4,6 +4,7 @@ from datetime import date
 from enum import Enum
 from enum import auto
 from typing import Any
+from typing import Optional
 from typing import cast
 
 from fastapi import FastAPI
@@ -81,8 +82,8 @@ async def create(post_create: PostCreate) -> PostPublic:
 
 
 class PostPartialUpdate(BaseModel):
-    title: str | None = None
-    content: str | None = None
+    title: Optional[str] = None
+    content: Optional[str] = None
 
 
 @app.patch("/posts/{id}", response_model=PostPublic)

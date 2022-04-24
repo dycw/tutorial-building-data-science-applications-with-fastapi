@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import Any
+from typing import Optional
 
 from pydantic import BaseModel
 from pydantic import Field
@@ -39,8 +40,8 @@ class PostBase(BaseModel):
 
 
 class PostPartialUpdate(BaseModel):
-    title: str | None = None
-    content: str | None = None
+    title: Optional[str] = None
+    content: Optional[str] = None
 
 
 class PostCreate(PostBase):

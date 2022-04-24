@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel
 from pydantic import Field
@@ -7,7 +8,7 @@ from pydantic import Field
 class Person(BaseModel):
     first_name: str = Field(..., min_length=3)
     last_name: str = Field(..., min_length=3)
-    age: int | None = Field(None, ge=0, le=120)
+    age: Optional[int] = Field(None, ge=0, le=120)
 
 
 def list_factory() -> list[str]:

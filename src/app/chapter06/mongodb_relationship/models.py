@@ -1,6 +1,7 @@
 from collections.abc import Iterator
 from datetime import datetime
 from typing import Any
+from typing import Optional
 
 from bson import ObjectId
 from pydantic import BaseModel
@@ -50,8 +51,8 @@ class PostBase(MongoBaseModel):
 
 
 class PostPartialUpdate(BaseModel):
-    title: str | None = None
-    content: str | None = None
+    title: Optional[str] = None
+    content: Optional[str] = None
 
 
 class PostCreate(PostBase):
