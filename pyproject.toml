@@ -1,5 +1,5 @@
 [tool.aerich]
-tortoise_orm = "app.chapter6.tortoise_relationship.app.TORTOISE_ORM"
+tortoise_orm = "app.chapter06.tortoise_relationship.app.TORTOISE_ORM"
 location = "./migrations"
 src_folder = "./."
 
