@@ -36,7 +36,7 @@ class NewsgroupsModel:
             tuple[Pipeline, list[str]], load("newsgroups_model.joblib")
         )
 
-    async def predict(self, input: PredictionInput) -> PredictionOutput:
+    def predict(self, input: PredictionInput) -> PredictionOutput:
         if not self.model or not self.targets:
             raise RuntimeError("Model is not loaded")
         prediction = predict(self.model, input.text)

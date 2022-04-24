@@ -6,4 +6,4 @@ gunicorn \
 	-w 4 \
 	-k uvicorn.workers.UvicornWorker \
 	--reload \
-	src.app.chapter13.caching:app
+	src.app.chapter13.async_not_async:app
