@@ -43,6 +43,7 @@ setup(  # https://bit.ly/3MJfVyH
         "joblib >= 1.1.0, < 1.2",
         "loguru >= 0.6.0, < 0.7",
         "motor >= 2.5.1, < 2.6",
+        "opencv-python >= 4.5.5.64, < 4.5.6",
         "passlib[bcrypt] >= 1.7.4, < 1.8",
         "pytest-asyncio >= 0.18.3, < 0.19",
         "python-multipart >= 0.0.5, < 0.6",
